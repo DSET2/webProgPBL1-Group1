@@ -1,3 +1,10 @@
 # webProgPBL1-Group1
 
-1. add some text
+Web Programming Assignment (Purchasing form)
+
+Group Members
+
+1. Ridhwan
+2. Haikal
+3. Ikmal
+ 

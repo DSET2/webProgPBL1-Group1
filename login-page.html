@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+          <title>Login Page</title>
+          <meta charset="UTF-8">
+          <meta name="description" content="Login Form">
+          <meta name="keywords" content="HTML, CSS">
+          <meta name="author" content="Haikal">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <style>
+               .header-style{
+                    background-color:#1c313a;
+                    color:#ffffff;
+                    text-align: center;
+               }
+
+               .form-style{
+                    position:relative;
+                    color:#ffffff;
+                    text-align: center;
+                    top:50px;
+               }
+
+               .img-style{
+                    width:24px;
+                    height:24px;
+               }
+          </style>
+    </head>
+
+    <body style="background-color:#455A64">
+          <h1 class="header-style">Login</h1>
+
+          <form class="form-style" action="login-details.php" method="post">
+              <img class="img-style" src="icons8-user-24.png">
+              <label for="username">&nbsp</label>
+              <input type="text" id="username" name="username" size="30" placeholder="username" required>
+              <br><br>
+              
+              <img class="img-style" src="icons8-password-48.png">
+              <label for="password">&nbsp</label>
+              <input type="password" id="password" name="password" size="30" placeholder="password" required>
+              <br><br>
+
+              <input type="submit" value="Login">
+          </form>
+    </body>
+
+</html>

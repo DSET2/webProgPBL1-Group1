@@ -9,7 +9,7 @@
 <body>
     <h1>Place your order here</h1>
     <hr>
-    <form method="POST" action="confirm.php">
+    <form method="POST" action="purchaseConfirm.php">
         <table>
         
         <tr>

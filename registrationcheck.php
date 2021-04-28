@@ -18,5 +18,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 Username is: <?php echo $_POST["name"]; ?> <br> <br>
 Password is: <?php echo $_POST["pass"]; ?><br><br>
 Email is: <?php echo $_POST["email"]; ?>
+<?php
+header("Refresh:3; url = index.html");
+?>
 </body>
 </html>

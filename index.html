@@ -1,54 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Page</title>
+</head>
 
-    <head>
-          <title>Login Page</title>
-          <meta charset="UTF-8">
-          <meta name="description" content="Login Form">
-          <meta name="keywords" content="HTML, CSS">
-          <meta name="author" content="Haikal">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+     <h1 class="header-style">Login</h1>
 
-          <style>
-               .header-style{
-                    background-color:#1c313a;
-                    color:#ffffff;
-                    text-align: center;
-               }
+     <form class="form-style" action="login-details.php" method="post">
+         <img class="img-style" src="https://user-images.githubusercontent.com/58899364/115753960-55065180-a3ce-11eb-87a1-990e6be68046.png">
+         <label for="username">&nbsp</label>
+         <input type="text" id="username" name="username" size="30" placeholder="username" required>
+         <br><br>
+         
+         <img class="img-style" src="https://user-images.githubusercontent.com/58899364/115754643-fbeaed80-a3ce-11eb-9756-2af3b26242a5.png">
+         <label for="password">&nbsp</label>
+         <input type="password" id="password" name="password" size="30" placeholder="password" required>
+         <br><br>
 
-               .form-style{
-                    position:relative;
-                    color:#ffffff;
-                    text-align: center;
-                    top:50px;
-               }
-
-               .img-style{
-                    width:24px;
-                    height:24px;
-               }
-          </style>
-    </head>
-
-    <body>
-          <h1 class="header-style">Login</h1>
-
-          <form class="form-style" action="login-details.php" method="post">
-              <img class="img-style" src="https://user-images.githubusercontent.com/58899364/115753960-55065180-a3ce-11eb-87a1-990e6be68046.png">
-              <label for="username">&nbsp</label>
-              <input type="text" id="username" name="username" size="30" placeholder="username" required>
-              <br><br>
-              
-              <img class="img-style" src="https://user-images.githubusercontent.com/58899364/115754643-fbeaed80-a3ce-11eb-9756-2af3b26242a5.png">
-              <label for="password">&nbsp</label>
-              <input type="password" id="password" name="password" size="30" placeholder="password" required>
-              <br><br>
-
-              <input type="submit" value="Login">
-
-               <br><br>
-              <a href="Registrationform.php">No Account?, Create One</a>
-          </form>
-    </body>
+         <input type="submit" value="Login">
+          <br><br>
+         <a href="registration.html">No Account?, Create One</a>
+     </form>
+</body>
 
 </html>
+
+<!-- https://stackoverflow.com/questions/1560497/move-object-from-1-page-to-another -->

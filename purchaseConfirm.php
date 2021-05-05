@@ -11,6 +11,25 @@
 <body>
     <h1>Purchasing success</h1>
     <?php
+
+    $firstName = $_POST["firstName"];
+    $lastName = $_POST["lastName"];
+    $phoneNumber= $_POST["phoneNumber"];
+    $email = $_POST["email"];
+    $streetAddress = $_POST["streetAddress"];
+    $city = $_POST["city"];
+    $state = $_POST["state"];
+    $zipCode = $_POST["zipCode"];
+
+    echo "Name :  $firstName  $lastName  <br>";
+    echo "Phone Number :  $phoneNumber <br>";
+    echo "Email :  $email <br>";
+    echo "Street Address :  $streetAddress <br>";
+    echo "City :  $city <br>";
+    echo "State :  $state <br>";
+    echo "State :  $zipCode <br>";
+
+
     header("Refresh:5; url = index.html");
     ?>
 

@@ -1,29 +1,37 @@
-<html>
-<head>
-
-       <link rel="stylesheet" type="text/css" href="registration-style.css">
-
-</head>
 
 
-<body>
-      <h2> Registration Form</h2>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="registration-style.css">
+   <title>Registration</title>
+ </head>
+ <body>
+  <h1> Registration Form</h1>
 
-    <form class="form-style" action="registrationCheck.php" method="post">
-        Username:
-        <input type="text" name="name">
+  <section class="form-registration">
 
-        <br><br>
-        Password:<input type="text" name="pass">
-        <br><br>
-        Confirm Password: <input type="text" name="cpassword">
+    <form class="form-style" action="registrationcheck.php" method="post">
+    
+      <input type="text" name="name" placeholder="Username">
 
-        <br><br>
-        Email Address:<input type="text" name="email">
-        <button type="submit">Finish</button>
+      <br><br>
+      <input type="text" name="pass" placeholder="Password">
+      <br><br>
+      <input type="text" name="cpassword" placeholder="Confirm Password">
 
-    </form>
+      <br><br>
+      <input type="text" name="email" placeholder="Email Address">
+      <br>
+      <button class="button"type="submit">Sign Up</button>
 
-</body>
+  </form>
+  </section>
 
-</html>
+ </body>
+ </html>
+

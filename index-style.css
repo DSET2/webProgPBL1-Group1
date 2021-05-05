@@ -1,11 +1,79 @@
-.header-style{
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1
+{
+  font-size: 2rem;
+  text-align: center;
+}
+
+h1.header-style
+{
+  font-size: 2.5rem;
+  display: inline-block;
+}
+
+a
+{
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: black;
+}
+a.register
+{
+  margin-left: 11rem;
+}
+
+input[type = text], #text-field
+{
+  width: 60%;
+  height: 50px;
+  border-radius: 15px;
+  padding-left: 10px;
+  margin-left: 11rem;
+}
+.button
+{
+  width: 60%;
+  margin-left: 12rem;
+  font-size: 0.9rem;
+  height: 3rem;
+  border-radius: 15px;
+  background-color:white;
+  border: 2px solid #4460F1;
+}
+.button:hover
+{
+  background-color: #4460F1
+}
+.header-style
+{
+ text-align: left;
+}
+
+.form-body
+{
+  padding: 8rem;
+   margin: 3rem 0 0 18rem;
+   width: 80%;
 
 }
 
 .form-style{
-
+  text-align: center;
+  padding: 5rem 0 0 15rem;
+  margin-left: 5rem;
 }
 
-.img-style{
-
+.form-description
+{
+  position: absolute;
+  margin-left: 7rem;
+  top: 16rem;
 }
+

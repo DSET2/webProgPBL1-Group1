@@ -4,28 +4,35 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.gstatic.com"> 
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="index-style.css">
      <title>Login Page</title>
 </head>
 
 <body>
-     <h1 class="header-style">Login</h1>
 
+  <section class="form-description">
+    <h1 class="header-style">Sign In to <br>Continue Shopping at HARI</h1>
+  </section>
+  
+  <section class="form-body">
      <form class="form-style" action="login-details.php" method="post">
-         <img class="img-style" src="https://user-images.githubusercontent.com/58899364/115753960-55065180-a3ce-11eb-87a1-990e6be68046.png">
-         <label for="username">&nbsp</label>
-         <input type="text" id="username" name="username" size="30" placeholder="username" required>
-         <br><br>
          
-         <img class="img-style" src="https://user-images.githubusercontent.com/58899364/115754643-fbeaed80-a3ce-11eb-9756-2af3b26242a5.png">
+         <label for="username">&nbsp</label>
+         <input id="text-field" type="text" id="username" name="username" size="30" placeholder="Enter email or username" required>
+         <br><br>
+        
          <label for="password">&nbsp</label>
-         <input type="password" id="password" name="password" size="30" placeholder="password" required>
+         <input id="text-field"type="password" id="password" name="password" size="30" placeholder="Password" required>
          <br><br>
 
-         <input type="submit" value="Login">
+         <input class="button" type="submit" value="Login">
           <br><br>
-         <a href="registration.html">No Account?, Create One</a>
+         <a class="register"href="registration.html">No Account?, Create One</a>
      </form>
+  </section>
+     
 </body>
 
 </html>

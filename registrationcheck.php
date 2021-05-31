@@ -1,53 +1,52 @@
 <html>
 <h1><u> Details</u></h1>
-<body>
+
+</html>
+
 <?php
-if ($_POST["pass"]!= $_POST["cpassword"])
- {
-     echo("Oops! Password did not match! Try again. ");
-	 return;
- }
- $email =($_POST["email"]);
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
- echo ("Invalid email format! Try again.");
-  return;
-}
- 
- ?>
 
-Username is: <?php echo $_POST["name"]; ?> <br> <br>
-Password is: <?php echo $_POST["pass"]; ?><br><br>
-Email is: <?php echo $_POST["email"]; ?><br><br>
-
-<?php 
-$servername="localhost";
-$username="root";
-$password="";
-
-$dbase="purchaseFormDB";
-
-$conn=new mysqli($servername, $username, $password, $dbase);
-
-if ($conn->connect_error) {
-	die("Connection failed:" .$conn->connect_error);
-} else
-echo "Connect Success    ";
+session_start();
 
 $name = $_POST["name"];
-$password = $_POST["pass"];
+$pass = $_POST["pass"];
 $email = $_POST["email"];
 
-$sql="INSERT INTO registration(username, password, email)
-VALUES('$name','$password','$email')";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbase = "purchasingDB";
+$conn = mysqli_connect($servername, $username, $password);
+mysqli_select_db($conn, 'purchasingDB');
 
-if($conn->query($sql)===TRUE) {
-	echo "New record created";
+//query the email from db
+$s = "select * from registration where username = '$name' ";
+
+$result = mysqli_query($conn, $s);
+
+//count number of row of this email apper in db
+$num = mysqli_num_rows($result);
+//cheack if the email already exist in db or not
+if ($num == 1) {
+  echo "Email already exists";
 } else {
-	echo "Error:" .$sql. "<br>" . $conn->error;
-}
-?>
 
-<?php
-header("Refresh:3; url = index.html");?>
-</body>
-</html>
+  if ($_POST["pass"] != $_POST["cpassword"]) {
+    echo ("Oops! Password did not match! Try again. ");
+    return;
+  }
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo ("Invalid email format! Try again.");
+    return;
+  }
+  //if not insert the data into db
+  $regist = "insert into registration(username, password, email) values ('$name','$pass','$email')";
+  //run the query
+  mysqli_query($conn, $regist);
+  echo "Registration success" . '<br>';
+  header("Refresh:3; url = index.html");
+}
+
+echo "$name" . "<br>";
+echo "$pass" . "<br>";
+echo "$email" . "<br>";
+?>

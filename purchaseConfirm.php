@@ -6,7 +6,7 @@
       $dbase = "purchaseFormDB";
 
       # Connect to db
-      $conn = new mysqli($serverName, $userName, $password);
+      $conn = new mysqli($serverName, $userName, $password,$dbase);
       if ($conn->connect_error) {
         die("Connection Failed" . $conn->connect_error);
       } else {

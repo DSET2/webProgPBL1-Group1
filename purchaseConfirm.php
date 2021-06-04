@@ -10,7 +10,7 @@
       if ($conn->connect_error) {
         die("Connection Failed" . $conn->connect_error);
       } else {
-        echo "Connection to db success";
+        echo "Connection to db success <br>";
       }
 
       $firstName = $_POST["firstName"];
@@ -62,12 +62,27 @@
     echo "Street Address :  $streetAddress <br>";
     echo "City :  $city <br>";
     echo "State :  $state <br>";
-    echo "State :  $zipCode <br>";
+    echo "Zip Code :  $zipCode <br>";
 
 
     // header("Refresh:5; url = index.html");
     ?>
 
+<br><br><h2>PURCHASE HISTORY<h2><br>
+    <?php 
+    
+    $sql="SELECT itemName FROM purchaseItem WHERE firstName='$firstName'";
+    $result=$conn->query($sql);
+
+    if($result->num_rows>0) {
+	  while($row=$result->fetch_assoc()) {
+		echo "Item Name: " . $row["itemName"]."<br>"; 
+  }
+      } else {
+	      echo "0 results";
+    }
+
+    ?>
 </body>
 
 </html> -->

@@ -13,8 +13,6 @@ if ($conn->connect_error) {
   // echo "Connection to db success <br>";
 }
 
-$firstName = $_POST["firstName"];
-
 $sql = "DELETE FROM purchaseitem  ";
 
 if ($conn->query($sql) === TRUE) {

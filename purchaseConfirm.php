@@ -3,7 +3,7 @@
       $serverName = "localhost";
       $userName = "root";
       $password = "";
-      $dbase = "purchaseFormDB";
+      $dbase = "purchasingDB";
 
       # Connect to db
       $conn = new mysqli($serverName, $userName, $password,$dbase);
@@ -24,7 +24,7 @@
       $itemPuchase = $_POST["item"];
 
       #Insert Item into DB
-      $sql="INSERT INTO purchaseItem(firstName,lastName,phoneNumber,email,streetAddress,cityName,state,zipCode,itemName)
+      $sql="INSERT INTO purchaseitem(firstName,lastName,phoneNumber,email,streetAddress,cityName,state,zipCode,itemName)
       VALUES('$firstName','$lastName','$phoneNumber','$email','$streetAddress','$city','$state','$zipCode','$itemPuchase')
       ";
 
@@ -65,13 +65,13 @@
     echo "Zip Code :  $zipCode <br>";
 
 
-    // header("Refresh:5; url = index.html");
+    header("Refresh:5; url = purchaseForm.html");
     ?>
 
 <br><br><h2>PURCHASE HISTORY<h2><br>
     <?php 
     
-    $sql="SELECT itemName FROM purchaseItem WHERE firstName='$firstName'";
+    $sql="SELECT itemName FROM purchaseitem WHERE firstName='$firstName'";
     $result=$conn->query($sql);
 
     if($result->num_rows>0) {
